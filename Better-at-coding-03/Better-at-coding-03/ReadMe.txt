@@ -2,39 +2,53 @@
     CONSOLE APPLICATION : Better-at-coding-03 Project Overview
 ========================================================================
 
-AppWizard has created this Better-at-coding-03 application for you.
+// Better-at-coding-03.cpp : Defines the entry point for the console application.
+//Design an algorithm and write code to remove the duplicate characters in a string
+//without using any additional bu#er.NOTE: One or two additional variables are !ne.
+//An extra copy of the array is not.
 
-This file contains a summary of what you will find in each of the files that
-make up your Better-at-coding-03 application.
+
+#include "stdafx.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main();
+
+void MakePure1();
+
+char *pc[255];
+
+int main()
+{
+	cout << "Hello, Tell me and I will make you pure!" << endl;
+	char c[255];
+	cin.get(c,255);
+	*pc = c;
+	MakePure1();
+	cout << c << endl;
+	system("PAUSE");
+    return 0;
+}
 
 
-Better-at-coding-03.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+void MakePure1() {
+	if (strlen((*pc)) == 1 || strlen((*pc)) == 0) {
+		return;
+	}
+	for (int i = 0; i <= strlen((*pc)); i++) {
+		char c = (*pc)[i];
+		for (int j = i + 1; j < strlen((*pc)); j++) {
+			if ((*pc)[j] == c) {
+				for (int k = j; k < strlen((*pc)); k++) {
+					(*pc)[k] = (*pc)[k + 1];
+				}j--;
+			}
+		}
+	}
+	return;
+}
 
-Better-at-coding-03.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Better-at-coding-03.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Better-at-coding-03.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////

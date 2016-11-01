@@ -2,39 +2,37 @@
     CONSOLE APPLICATION : Better-at-coding-01 Project Overview
 ========================================================================
 
-AppWizard has created this Better-at-coding-01 application for you.
+// Better-at-coding-01.cpp : Defines the entry point for the console application.
+//Implement an algorithm to determine if a string has all unique characters. What if you
+//can not use additional data structures ?
 
-This file contains a summary of what you will find in each of the files that
-make up your Better-at-coding-01 application.
+#include "stdafx.h"
+#include <iostream>
+#include <string>
 
-
-Better-at-coding-01.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Better-at-coding-01.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Better-at-coding-01.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Better-at-coding-01.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+using namespace std;
+int main()
+{
+	cout << "Now tell me in detail!" << endl;
+	string s;
+	cin >> s;
+	bool flag = false;
+	for (int i = 0; i < s.length() ; i++) {
+		char c = s[i];
+		for (int j = i+1; j < s.length(); j++) {
+			if (s[i] == s[j]) {
+				flag = true;
+			}
+		}
+	}
+	if (flag == true) {
+		cout << "Your string has a duplicate in it" << endl;
+	}
+	else
+	{
+		cout << "Your string has only unique chars in it" << endl;
+	}
+	system("PAUSE");
+    return 0;
+}
+========================================================================

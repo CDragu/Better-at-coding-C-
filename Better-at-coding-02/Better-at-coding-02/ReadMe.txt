@@ -2,39 +2,32 @@
     CONSOLE APPLICATION : Better-at-coding-02 Project Overview
 ========================================================================
 
-AppWizard has created this Better-at-coding-02 application for you.
+// Better-at-coding-02.cpp : Defines the entry point for the console application.
+//Write code to reverse a C-Style String. (C-String means that “abcd” is represented as
+//!ve characters, including the null character.)
 
-This file contains a summary of what you will find in each of the files that
-make up your Better-at-coding-02 application.
+#include "stdafx.h"
+#include <iostream>
+#include <string>
 
-
-Better-at-coding-02.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Better-at-coding-02.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Better-at-coding-02.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Better-at-coding-02.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+using namespace std;
+int main()
+{
+	string s;
+	cout << "Tell me and I will mirror it" << endl;
+	cin >> s;
+	string is(s.length()+1, '0');
+	int lenght = s.length()-1;
+	int i = 0;
+	while (lenght >= 0) {
+		is[i] = s[lenght];
+		lenght--;
+		i++;
+	}
+	is[i] = NULL;
+	cout << is << endl;
+	system("PAUSE");
+    return 0;
+}
 
 /////////////////////////////////////////////////////////////////////////////
