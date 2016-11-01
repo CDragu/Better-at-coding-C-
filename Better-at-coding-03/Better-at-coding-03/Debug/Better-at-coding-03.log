@@ -1,6 +1,0 @@
-﻿  Better-at-coding-03.cpp
-c:\users\cc\documents\visual studio 2015\projects\better-at-coding-03\better-at-coding-03\better-at-coding-03.cpp(37): warning C4018: '<=': signed/unsigned mismatch
-c:\users\cc\documents\visual studio 2015\projects\better-at-coding-03\better-at-coding-03\better-at-coding-03.cpp(39): warning C4018: '<': signed/unsigned mismatch
-c:\users\cc\documents\visual studio 2015\projects\better-at-coding-03\better-at-coding-03\better-at-coding-03.cpp(41): warning C4018: '<': signed/unsigned mismatch
-  Better-at-coding-03.vcxproj -> C:\Users\cc\documents\visual studio 2015\Projects\Better-at-coding-03\Debug\Better-at-coding-03.exe
-  Better-at-coding-03.vcxproj -> C:\Users\cc\documents\visual studio 2015\Projects\Better-at-coding-03\Debug\Better-at-coding-03.pdb (Full PDB)
