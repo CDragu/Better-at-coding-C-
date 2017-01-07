@@ -22,16 +22,19 @@ int main()
 	string s2;
 	cin >> s2;
 	bool anagram = true;
-
-	for (int i = 0; i < s1.length(); i++) {					//taking each letter of the first word
-		for (int j = 0; j < s2.length(); j++) {				//check it with the letter form the second word
-			if (s2[j] == s1[i]) {							//if it finds one the it removes it and starts again
+	//taking each letter of the first word
+	for (int i = 0; i < s1.length(); i++) {	
+		//check it with the letter form the second word				
+		for (int j = 0; j < s2.length(); j++) {	
+			//if it finds one the it removes it and starts again			
+			if (s2[j] == s1[i]) {							
 				for (int k = j; k < s2.length(); k++) {
 					s2[k] = s2[k + 1];
 				}
 				break;
 			}
-			if (j == s2.length() - 1) {						//if we arrive at the end of the second word and we did not find the letter it's not an anagram
+			//if we arrive at the end of the second word and we did not find the letter it's not an anagram
+			if (j == s2.length() - 1) {						
 				anagram = false;
 			}
 		}
